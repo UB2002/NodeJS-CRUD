@@ -39,8 +39,8 @@ This API project is built using Node.js and MongoDB. It provides a simple yet po
     npm run dev
 ## EndPoints
  1.**CRUD-operations**
-  -**GET /employees: Get all employees.
- [GET /employees/:id: Get an employee by ID].
- -POST /employees: Create a new employee.
- -PUT /employees/:id: Update an employee by ID.
- -DELETE /employees/:id: Delete an employee by ID.
+  - **GET /employees**: Get all employees.
+  - **GET /employees/:id**: Get an employee by ID.
+  - **POST /employees**: Create a new employee.
+  - **PUT /employees/:id**: Update an employee by ID.
+  - **DELETE /employees/:id**: Delete an employee by ID.
