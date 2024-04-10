@@ -8,7 +8,7 @@ This Node.js API project provides endpoints for managing employee data. It allow
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- EndPoits(#Endpoints)
+- [EndPoits](#Endpoints)
 ## Description
 
 This API project is built using Node.js and MongoDB. It provides a simple yet powerful interface for managing employee data within an organization. It can be used as a backend service for various applications requiring employee management functionality.
