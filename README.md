@@ -34,5 +34,7 @@ This API project is built using Node.js and MongoDB. It provides a simple yet po
    cd node-employee-api
 3. **Install dependencies:**
      ```bash
-     npm install
-
+     npm mongoose
+     npm express
+## usage
+ 1. ****
