@@ -29,3 +29,10 @@ This API project is built using Node.js and MongoDB. It provides a simple yet po
 
    ```bash
    git clone https://github.com/your-username/node-employee-api.git
+2. **Navigate to the project directory:**
+   ```bash
+   cd node-employee-api
+3. **Install dependencies:**
+     ```bash
+     npm install
+
