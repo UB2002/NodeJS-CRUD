@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 const Employee = require('./EmployeModel');
 
 const app = express();
@@ -8,6 +9,12 @@ const uri = 'mongodb+srv://udaybhaskarmathangi:mX0W7b1UMwwUP6Ph@ub2002.carusdb.m
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+// Enable CORS for the frontend domain
+app.use(cors({
+  origin: 'https://mern-crud-1gszcwfcm-ub2002s-projects.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 app.get('/', (req, res) => {
     res.send('Hello NODE API');
@@ -17,7 +24,7 @@ app.get('/blog', (req, res) => {
     res.send('Hello Blog, My name is Devtamin');
 });
 
-app.get('/employees', async (req, res) => {
+app.get('/get', async (req, res) => {
     try {
         const employees = await Employee.find({});
         res.status(200).json(employees);
@@ -36,7 +43,7 @@ app.get('/employees/:id', async (req, res) => {
     }
 });
 
-app.post('/employees', async (req, res) => {
+app.post('/post', async (req, res) => {
     try {
         const employee = await Employee.create(req.body);
         res.status(201).json(employee);
@@ -59,7 +66,7 @@ app.put('/employees/:id', async (req, res) => {
     }
 });
 
-app.delete('/employees/:id', async (req, res) => {
+app.delete('/delete/:id', async (req, res) => {
     try {
         const { id } = req.params;
         const employee = await Employee.findByIdAndDelete(id);
@@ -82,4 +89,4 @@ mongoose.connect(uri)
     })
     .catch((error) => {
         console.log(error);
-});
+    });
